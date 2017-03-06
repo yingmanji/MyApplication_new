@@ -16,6 +16,8 @@ public class Activity_progressBar extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_bar);
         pb=(ProgressBar)findViewById(R.id.pb);
+        random=new Random();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
