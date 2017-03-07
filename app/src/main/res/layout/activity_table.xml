@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:stretchColumns="1">
+    <TableRow
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:text="url"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"/>
+        <EditText
+            android:hint="@string/et_hint"/>
+    </TableRow>
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp"></View>
+    <TableLayout
+        android:layout_marginTop="5dp">
+        <!--通过在TableRow中添加gravity可以使控件靠右对齐-->
+        <TableRow
+
+            android:gravity="right|center_vertical">
+            <Button
+                android:layout_column="1"
+                android:text="@string/btn_sure"/>
+            <Button
+                android:text="@string/btn_cancel"/>
+        </TableRow>
+    </TableLayout>
+</TableLayout>
