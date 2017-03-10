@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class activity_list extends Activity {
     TextView textView2;
     ListView listView;
-    String[] items={"北京市","上海市","广州市","深圳市","西安市","珠海市","汕头市","潮州市","江门市","成都市","重庆市"};
+    String[] items={"北京市","上海市","广州市","深圳市","重庆市","天津市","武汉市","西安市","沈阳市","长沙市","珠海市"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
