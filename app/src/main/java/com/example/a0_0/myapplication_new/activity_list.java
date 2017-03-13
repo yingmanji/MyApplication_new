@@ -22,9 +22,9 @@ public class activity_list extends Activity {
         setContentView(R.layout.activity_list);
         textView2=(TextView)findViewById(R.id.textView2);
         listView=(ListView)findViewById(R.id.listView);
-        ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_multiple_choice,items);
+        ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_single_choice,items);
         listView.setAdapter(arrayAdapter);
-        listView.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
+        listView.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_list2"
+    android:id="@+id/activity_simple_adapter"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.a0_0.myapplication_new.activity_list2">
-
+    tools:context="com.example.a0_0.myapplication_new.activity_simple_adapter">
     <TextView
+        android:id="@+id/tv"
+        android:text="textView"
+        android:textSize="18sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
-    <!--listView加了id会显示item-->
+        android:layout_height="wrap_content" />
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
-
+        android:layout_height="match_parent"></ListView>
 </LinearLayout>
