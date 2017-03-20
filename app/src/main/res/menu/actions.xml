@@ -2,14 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/add"
-        android:title="add">
-    </item>
+        android:title="add"
+        android:showAsAction="always"
+        android:icon="@mipmap/ic_launcher"/>
     <item
         android:id="@+id/reset"
-        android:title="reset">
-    </item>
+        android:showAsAction="always"
+        android:title="reset"/>
     <item
         android:id="@+id/about"
-        android:title="about">
-    </item>
+        android:showAsAction="always"
+        android:title="about"/>
+    <item
+        android:id="@+id/add2"
+        android:title="add2"
+        android:showAsAction="always"
+        android:icon="@mipmap/ic_launcher"/>
+    <item
+        android:id="@+id/reset2"
+        android:showAsAction="ifRoom"
+        android:title="reset2"/>
+    <item
+        android:id="@+id/about2"
+        android:showAsAction="ifRoom"
+        android:title="about2"/>
 </menu>
