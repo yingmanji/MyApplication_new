@@ -21,4 +21,8 @@ public class Activity_call extends Activity {
     {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.baidu.com")));
     }
+    public void dial(View view)
+    {
+        startActivity(new Intent(Intent.ACTION_DIAL,Uri.parse("tel"+"13560375076")));
+    }
 }
