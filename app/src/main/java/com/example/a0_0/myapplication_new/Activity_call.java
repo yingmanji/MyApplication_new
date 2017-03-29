@@ -23,6 +23,12 @@ public class Activity_call extends Activity {
     }
     public void dial(View view)
     {
-        startActivity(new Intent(Intent.ACTION_DIAL,Uri.parse("tel"+"13560375076")));
+        startActivity(new Intent(Intent.ACTION_DIAL,Uri.parse("tel:"+"13560375076")));
+    }
+    public void call_relative(View view)
+    {
+        Intent intent=new Intent();
+        intent.setClassName("com.example.a0_0.testandroid3","com.example.a0_0.testandroid3.Activity_linear");
+        startActivity(intent);
     }
 }

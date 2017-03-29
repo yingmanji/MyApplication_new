@@ -21,4 +21,9 @@
         android:onClick="dial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:text="testAndroid_relative"
+        android:onClick="call_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
