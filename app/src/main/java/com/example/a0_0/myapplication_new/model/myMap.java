@@ -8,7 +8,7 @@ import java.util.Map;
  * Created by 樱满集0_0 on 2017/3/29.
  */
 
-public class MyMap implements Serializable{
+public class myMap implements Serializable{
     private Map<String,String> map=new HashMap<>();
 
     public Map<String, String> getMap() {
