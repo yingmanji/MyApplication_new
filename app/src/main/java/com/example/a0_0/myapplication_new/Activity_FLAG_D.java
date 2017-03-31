@@ -21,6 +21,7 @@ public class Activity_FLAG_D extends Activity {
         //intent.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);//a b c d b
         //intent.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);//a b c d b
         //intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);//a b c d b
+        //intent.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);//a b c d b
         startActivity(intent);
     }
 }
