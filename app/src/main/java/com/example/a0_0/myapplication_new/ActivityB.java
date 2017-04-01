@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.a0_0.myapplication_new.model.myMap;
+import com.example.a0_0.myapplication_new.model.MyMap;
 import com.example.a0_0.myapplication_new.model.User;
 
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class ActivityB extends Activity {
         /*User user=(User)intent.getExtras().getSerializable("myUser");//接收的是Serializable类型的参数，需要强转为User型
         if(null!=user)
             System.out.println("user:"+user.getUserId()+"  "+user.getUserName());*/
-        myMap myMap=(com.example.a0_0.myapplication_new.model.myMap) intent.getSerializableExtra("myMap");//注意强转最好后写，否则不会提词
+        MyMap myMap=(com.example.a0_0.myapplication_new.model.MyMap) intent.getSerializableExtra("myMap");//注意强转最好后写，否则不会提词
         if(null!=myMap)
             System.out.println("map:"+myMap.getMap().get("mkey1")+"  "+myMap.getMap().get("mkey2"));
         User user2=intent.getParcelableExtra("myUser2");

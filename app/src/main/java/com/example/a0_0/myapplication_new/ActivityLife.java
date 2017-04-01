@@ -2,17 +2,22 @@ package com.example.a0_0.myapplication_new;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends Activity {
+public class ActivityLife extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         System.out.println("#:"+getClass().getSimpleName()+" onCreate");
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_life);
+    }
+
+    public void go(View view)
+    {
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 
     @Override

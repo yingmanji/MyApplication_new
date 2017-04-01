@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.a0_0.myapplication_new.model.myMap;
+import com.example.a0_0.myapplication_new.model.MyMap;
 import com.example.a0_0.myapplication_new.model.User;
 
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class Activity_Extra extends Activity {
         arrayList.add("bcd");
         arrayList.add("cde");
         intent.putStringArrayListExtra("myList",arrayList);
-        myMap myMap=new myMap();
+        MyMap myMap=new MyMap();
         Map<String,String> map= new HashMap<>();
         map.put("mkey1","guangzhou");
         map.put("mkey2","beijing");
