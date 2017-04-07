@@ -21,8 +21,7 @@ public class Activity_Fragment extends Activity {
             tv1.setVisibility(view.VISIBLE);
             tv2.setVisibility(View.INVISIBLE);
         }
-        else if(view.getId()==R.id.btn3)
-        {
+        else if(view.getId()==R.id.btn3) {
             tv1.setVisibility(view.INVISIBLE);
             tv2.setVisibility(View.VISIBLE);
         }

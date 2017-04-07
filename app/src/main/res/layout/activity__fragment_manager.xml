@@ -11,8 +11,9 @@
         android:onClick="change"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    《！--frameLayout有第二个控件覆盖第一个控件的特点-->
     <FrameLayout
-        android:id="@+id/frame_fragmentManager"
+        android:id="@+id/frame_fragmentmanager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="match_parent"></FrameLayout>
 </LinearLayout>

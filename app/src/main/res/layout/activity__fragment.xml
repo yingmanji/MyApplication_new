@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context="com.example.a0_0.myapplication_new.Activity_Fragment">
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
@@ -29,6 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
+    <!--必须让fragment继成android.app而不是V4,否则会显示出现错误-->
+    <!--<fragment
+        android:name="com.example.a0_0.myapplication_new.fragments.BlankFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
