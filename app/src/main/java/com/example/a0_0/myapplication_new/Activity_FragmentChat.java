@@ -17,10 +17,12 @@ public class Activity_FragmentChat extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__fragment_chat);
         fragment_chatOne=new Fragment_ChatOne();
-        fragment_chatTwo=new Fragment_ChatTwo();
         FragmentManager manager=getFragmentManager();
         FragmentTransaction transaction=manager.beginTransaction();
         if(null!=fragment_chatOne) {
+            Bundle bundle=new Bundle();
+            bundle.putString("key_one","这是Fragment_ChatOne由Activity发出...");
+            fragment_chatOne.setArguments(bundle);
             transaction.add(R.id.fl, fragment_chatOne);
         }
         transaction.commit();
@@ -38,11 +40,12 @@ public class Activity_FragmentChat extends Activity {
             }
             transaction.replace(R.id.fl,fragment_chatOne);
         }
-        else if(view.getId()==R.id.btn1)
+        else if(view.getId()==R.id.btn2)
         {
             if(fragment_chatTwo==null)
             {
                 fragment_chatTwo=new Fragment_ChatTwo();
+                fragment_chatTwo.getStr("这是fragment_charTwo，直接显示");
                 transaction.add(R.id.fl,fragment_chatTwo);
             }
             transaction.replace(R.id.fl,fragment_chatTwo);

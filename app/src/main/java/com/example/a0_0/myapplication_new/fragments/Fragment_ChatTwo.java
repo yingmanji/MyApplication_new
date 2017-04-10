@@ -15,6 +15,7 @@ import com.example.a0_0.myapplication_new.R;
  */
 public class Fragment_ChatTwo extends Fragment {
     private TextView tv2;
+    private String str="";
 
     public Fragment_ChatTwo() {
         // Required empty public constructor
@@ -31,11 +32,11 @@ public class Fragment_ChatTwo extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Bundle bundle=getArguments();
         tv2=(TextView) view.findViewById(R.id.tv2);
-        if(null!=bundle)
-        {
-            tv2.setText(bundle.getString("key_one","one"));
-        }
+        tv2.setText(str);
+    }
+    public void getStr(String str)
+    {
+        this.str=str;
     }
 }
