@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 import com.example.a0_0.myapplication_new.fragments.DetailFragment;
 import com.example.a0_0.myapplication_new.fragments.MasterFragment;
 
-public class Activity_dual extends Activity {
+public class Activity_dual extends Activity {//通过实现创建的接口OnMasterSelectedListener来实现Fragment到Activity到Fragment之间的通信
     private boolean dualPane;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,7 +17,7 @@ public class activity_list2 extends ListActivity {
         setContentView(R.layout.activity_list_view2);
         //textView必须放在setContentView之后
         textView2=(TextView)findViewById(R.id.textView2);
-        setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items));
+        setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items));//注意与继承普通Activity不一样，不用找到list,有自带的setListAdapter方法
     }
 
     @Override

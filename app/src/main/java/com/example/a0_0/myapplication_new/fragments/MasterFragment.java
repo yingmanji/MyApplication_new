@@ -29,7 +29,8 @@ public class MasterFragment extends ListFragment {
         String[] cityArray={"北京市","上海市","广州市","深圳市"};
         ListAdapter adapter=
                 new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,cityArray);
-        getListView().setAdapter(adapter);
+        //getListView().setAdapter(adapter);不用setAdapter(),因为不同于继承普通的Activity，这里是继承的ListFragment,有自带的setListAdapter
+        setListAdapter(adapter);
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

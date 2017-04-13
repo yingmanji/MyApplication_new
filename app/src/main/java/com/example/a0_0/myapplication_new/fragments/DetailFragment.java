@@ -39,6 +39,6 @@ public class DetailFragment extends Fragment {
     }
 
     public void showSelectedCityName(String cityName) {
-        ((TextView)getView().findViewById(R.id.tv)).setText(cityName);
+        ((TextView)getView().findViewById(R.id.tv_cityName)).setText(cityName);
     }
 }

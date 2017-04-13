@@ -9,7 +9,7 @@ import android.view.View;
 import com.example.a0_0.myapplication_new.fragments.Fragment_ChatOne;
 import com.example.a0_0.myapplication_new.fragments.Fragment_ChatTwo;
 
-public class Activity_FragmentChat extends Activity {
+public class Activity_FragmentChat extends Activity {//实现Activity到Fragment之间的通信
     private Fragment_ChatOne fragment_chatOne;
     private Fragment_ChatTwo fragment_chatTwo;
     @Override
