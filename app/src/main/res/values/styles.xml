@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="navi_radiobutton">
+        <!--设置没有RadioButton样式-->
         <item name="android:button">@null</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_height">match_parent</item>

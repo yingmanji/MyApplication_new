@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.example.a0_0.myapplication_new.Activity_navi_bottom">
     <FrameLayout
-        android:id="@+id/f1"
+        android:id="@+id/fl"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></FrameLayout>
@@ -21,9 +21,32 @@
             android:text="微信"
             android:checked="true"
              android:layout_weight="1"
-            android:drawableTop="@drawable/wxchecked"
+            android:drawableTop="@drawable/menu_wx"
             style="@style/navi_radiobutton"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+        <RadioButton
+            android:id="@+id/rb_txl"
+            android:text="通讯录"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/menu_txl"
+            style="@style/navi_radiobutton"
+            android:layout_width="match_parent"
+            />
+        <RadioButton
+            android:id="@+id/rb_fx"
+            android:text="发现"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/menu_fx"
+            style="@style/navi_radiobutton"
+            android:layout_width="match_parent"
+            />
+        <RadioButton
+            android:id="@+id/rb_wd"
+            android:text="我的"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/menu_wd"
+            style="@style/navi_radiobutton"
             android:layout_width="match_parent"
             />
     </RadioGroup>
