@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_navi_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a0_0.myapplication_new.Activity_navi_bottom">
+    <FrameLayout
+        android:id="@+id/f1"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+    <RadioGroup
+        android:id="@+id/rg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RadioButton
+            android:id="@+id/rb_wx"
+            android:text="微信"
+            android:checked="true"
+             android:layout_weight="1"
+            android:drawableTop="@drawable/wxchecked"
+            style="@style/navi_radiobutton"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+    </RadioGroup>
+</LinearLayout>
