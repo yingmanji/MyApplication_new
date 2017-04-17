@@ -13,6 +13,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         System.out.println("#:"+getClass().getSimpleName()+" onCreate");
         setContentView(R.layout.activity_main);
+        //getResources().openRawResource(R.raw.music_soverytohard);
+        //getResources().getXml(R.xml.xx);
     }
 
     @Override
