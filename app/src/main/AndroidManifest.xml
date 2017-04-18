@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a0_0.myapplication_new">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--必须要给访问网络的权限-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,11 +12,14 @@
 
         <!--  -->
         <activity android:name=".MainActivity">
-   <!--         <intent-filter>
+
+            <!--
+                <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".Activity_progressBar">
 
@@ -213,13 +217,23 @@
             -->
         </activity>
         <activity android:name=".Activity_navi_bottom">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".ActivityFile">
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
-        <activity android:name=".ActivityFile">
+        <activity android:name=".Activity_URL">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
