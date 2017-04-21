@@ -20,7 +20,7 @@ public class Activity_URL2 extends Activity {
     }
     public void getNetData(View view)
     {
-        String url="https://www.baidu.com";
+        String url="https://www.taobao.com";
         new NetWorkTask(tv_data,pb_load).execute(url);
     }
 }
