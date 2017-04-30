@@ -20,7 +20,8 @@ public class Activity_URL2 extends Activity {
     }
     public void getNetData(View view)
     {
-        String url="https://www.taobao.com";
+        //String url="https://www.taobao.com";
+        String url="http://www.weather.com.cn/data/sk/101110101.html";
         new NetWorkTask(tv_data,pb_load).execute(url);
     }
 }

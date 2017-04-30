@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -45,6 +47,7 @@ public class NetWorkTask extends AsyncTask<String ,Integer,String> {
         }*/
         try {
             URL url = new URL(params[0]);
+            System.out.println("#url"+url);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             InputStream inputStream=connection.getInputStream();
             int total=connection.getContentLength();
@@ -54,16 +57,13 @@ public class NetWorkTask extends AsyncTask<String ,Integer,String> {
             StringBuffer result=new StringBuffer();
             while((in=inputStream.read(buf))!=-1)
             {
-                for(int i=1;i<10000000;i++)//换成10显示数据，但测试部分不显示数据
-                {
-                    System.out.println("运行了");
-                    downloadSize=downloadSize+in;//计算文件已下载大小
-                    int progress=(int)((float)downloadSize/total*100);//计算已下载百分数
-                    publishProgress(progress);//显示已下载百分数
-                    result.append(new String(buf, 0, in));//将下载的数据添加到result中
-                    System.out.println(i);
-                    System.out.println(result.toString());
-                }
+                for(int i=1;i<10000000;i++);//这是个循环 注意里面不包含任何内容
+                downloadSize=downloadSize+in;//计算文件已下载大小
+                int progress=(int)((float)downloadSize/total*100);//计算已下载百分数
+                System.out.println("#progress:"+progress);
+                publishProgress(progress);//显示已下载百分数,发布进度通知
+                result.append(new String(buf, 0, in));//将下载的数据添加到result中
+                System.out.println(result.toString());
             }
             System.out.println(result.toString());
             return result.toString();
@@ -90,9 +90,13 @@ public class NetWorkTask extends AsyncTask<String ,Integer,String> {
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        if(s!=null)
+     /*   if(s!=null)
         {
             tv_data.setText(s);
-        }
+        }*/
+        Gson gson=new Gson();
+        Weather weather=gson.fromJson(s,Weather.class);
+        tv_data.setText(weather.getWeatherinfo().getCity()+"  "+weather.getWeatherinfo().getTemp()+"  ");
+        System.out.println("运行了....");
     }
 }
