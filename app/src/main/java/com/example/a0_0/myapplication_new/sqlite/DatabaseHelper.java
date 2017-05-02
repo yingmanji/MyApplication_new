@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return myInstance;
     }
-    //在初次运行时执行，只执行一次,必须小心onCreate的内容只执行一次！必须确定SQL代码没有异常！
+    //在初次运行时执行，只执行一次,必须小心onCreate的内容只执行一次！必须确定SQL代码没有异常!暂时无法找到mydb.db位置
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {
