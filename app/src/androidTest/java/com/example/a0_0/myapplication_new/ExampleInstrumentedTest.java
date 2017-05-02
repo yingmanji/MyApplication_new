@@ -4,6 +4,9 @@ import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.a0_0.myapplication_new.model.Contact;
+import com.example.a0_0.myapplication_new.sqlite.DatabaseHelper;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -20,7 +23,19 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-
-        assertEquals("com.example.a0_0.myapplication_new", appContext.getPackageName());
+        DatabaseHelper helper=DatabaseHelper.getInstance(appContext);
+        helper.getReadableDatabase();
+        System.out.println("##"+helper.getDatabaseName());
+        Contact contact=new Contact("zhang","18888888888");
+        long flag=helper.add(contact);
+        if(flag>0)
+        {
+            System.out.println("#成功");
+        }
+        else
+        {
+            System.out.println("#失败");
+        }
+//        assertEquals("com.example.a0_0.myapplication_new", appContext.getPackageName());
     }
 }
