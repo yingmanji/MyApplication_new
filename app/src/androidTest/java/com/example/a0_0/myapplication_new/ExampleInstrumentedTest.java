@@ -10,6 +10,8 @@ import com.example.a0_0.myapplication_new.sqlite.DatabaseHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -26,7 +28,9 @@ public class ExampleInstrumentedTest {
         DatabaseHelper helper=DatabaseHelper.getInstance(appContext);
         helper.getReadableDatabase();
         System.out.println("##"+helper.getDatabaseName());
-        Contact contact=new Contact("zhang","18888888888");
+//        Contact contact=new Contact("zhang","18888888888");
+//        Contact contact=new Contact("wang","13333333333");
+        Contact contact=new Contact("li","12222222222");
         long flag=helper.add(contact);
         if(flag>0)
         {
@@ -35,6 +39,11 @@ public class ExampleInstrumentedTest {
         else
         {
             System.out.println("#失败");
+        }
+        List<Contact> list=helper.getALLContact();
+        for(Contact c:list)
+        {
+            System.out.println("#"+c);
         }
 //        assertEquals("com.example.a0_0.myapplication_new", appContext.getPackageName());
     }

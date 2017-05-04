@@ -9,6 +9,9 @@ public class Contact {
     private String cname;
     private String cphone;
 
+    public Contact() {
+    }
+
     public Contact(String cname, String cphone) {
         this.cname = cname;
         this.cphone = cphone;
@@ -42,5 +45,13 @@ public class Contact {
 
     public void setCphone(String cphone) {
         this.cphone = cphone;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact:[" +
+                 cid +
+                "," + cname +
+                "," + cphone +"]";
     }
 }

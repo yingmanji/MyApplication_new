@@ -2,12 +2,15 @@ package com.example.a0_0.myapplication_new.sqlite;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.a0_0.myapplication_new.model.Contact;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 樱满集0_0 on 2017/5/2.
@@ -68,5 +71,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         System.out.println("###"+values);
         long flag=db.insert(TB_NAME,null,values);//返回受影响的行数
         return flag;//0和-1为失败
+    }
+    public List<Contact> getALLContact()
+    {
+        List<Contact> list=new ArrayList<>();
+        SQLiteDatabase db=myInstance.getReadableDatabase();
+        Cursor cursor=null;
+        try
+        {
+            cursor=db.rawQuery("select * from "+DatabaseHelper.TB_NAME,null);//能用常量尽量用常量,第二个参数可以new一个字符串数组
+            if(cursor!=null&&cursor.moveToFirst())//判断是否可以移动到第一条
+            {
+                do{
+                    //cursor.getColumnCount();//列的个数，字段的个数
+                    Contact contact=new Contact();
+                    contact.setCid(cursor.getInt(0));//获取cid并设置到模型类Contact中
+                    contact.setCname(cursor.getString(1));//获取cname
+                    contact.setCphone(cursor.getString(2));//获取cphone
+                    list.add(contact);
+                }
+                while(cursor.moveToNext());//判断是否可以移动到最后一条，判断是否结束
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println("#查询失败"+e.toString());
+        }
+        finally
+        {
+            if(cursor!=null) {
+                cursor.close();//关闭游标
+            }
+        }
+        return list;
     }
 }
