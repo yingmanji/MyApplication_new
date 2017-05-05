@@ -5,14 +5,13 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.example.a0_0.myapplication_new.model.Contact;
-import com.example.a0_0.myapplication_new.sqlite.DatabaseHelper;
+import com.example.a0_0.myapplication_new.sqlite.service.ContactService;
+import com.example.a0_0.myapplication_new.sqlite.service.ContactServiceImpl;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * Instrumentation test, which will execute on an Android device.
@@ -25,13 +24,14 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-        DatabaseHelper helper=DatabaseHelper.getInstance(appContext);
-        helper.getReadableDatabase();
-        System.out.println("##"+helper.getDatabaseName());
+//        DatabaseHelper helper=DatabaseHelper.getInstance(appContext);
+        ContactService contactService=new ContactServiceImpl(appContext);
+//        helper.getReadableDatabase();//用了代理以后可以不要，不是因为有了代理，而是数据库之前创建过了
+//        System.out.println("##"+helper.getDatabaseName());
 //        Contact contact=new Contact("zhang","18888888888");
 //        Contact contact=new Contact("wang","13333333333");
-        Contact contact=new Contact("li","12222222222");
-        long flag=helper.add(contact);
+        Contact contact=new Contact("chen","15555555555");
+        long flag=contactService.add(contact);
         if(flag>0)
         {
             System.out.println("#成功");
@@ -40,7 +40,7 @@ public class ExampleInstrumentedTest {
         {
             System.out.println("#失败");
         }
-        List<Contact> list=helper.getALLContact();
+        List<Contact> list=contactService.getALLContact();
         for(Contact c:list)
         {
             System.out.println("#"+c);

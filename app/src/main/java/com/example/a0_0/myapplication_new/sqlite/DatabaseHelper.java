@@ -63,7 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     public long add(Contact contact)
     {
-        SQLiteDatabase db=myInstance.getReadableDatabase();
+        SQLiteDatabase db=myInstance.getReadableDatabase();//获取数据库，假如没有就创建,此处理想结果为不需要创建
         ContentValues values=new ContentValues();
         System.out.println("###"+TB_NAME);
         values.put(FIELD_CNAME,contact.getCname());
@@ -85,9 +85,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 do{
                     //cursor.getColumnCount();//列的个数，字段的个数
                     Contact contact=new Contact();
-                    contact.setCid(cursor.getInt(0));//获取cid并设置到模型类Contact中
-                    contact.setCname(cursor.getString(1));//获取cname
-                    contact.setCphone(cursor.getString(2));//获取cphone
+//                    contact.setCid(cursor.getInt(0));//获取cid并设置到模型类Contact中
+                    contact.setCid(cursor.getInt(cursor.getColumnIndex("cid")));//用数字虽然简单，但是不够直观
+//                    contact.setCname(cursor.getString(1));//获取cname
+//                    contact.setCphone(cursor.getString(2));//获取cphone
+                    contact.setCname(cursor.getString(cursor.getColumnIndex("cname")));
+                    contact.setCphone(cursor.getString(cursor.getColumnIndex("cphone")));
                     list.add(contact);
                 }
                 while(cursor.moveToNext());//判断是否可以移动到最后一条，判断是否结束
