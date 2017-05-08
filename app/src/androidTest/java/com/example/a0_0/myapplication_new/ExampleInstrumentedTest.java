@@ -1,6 +1,7 @@
 package com.example.a0_0.myapplication_new;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -12,6 +13,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.List;
+
 
 /**
  * Instrumentation test, which will execute on an Android device.
@@ -30,8 +32,17 @@ public class ExampleInstrumentedTest {
 //        System.out.println("##"+helper.getDatabaseName());
 //        Contact contact=new Contact("zhang","18888888888");
 //        Contact contact=new Contact("wang","13333333333");
-        Contact contact=new Contact("chen","15555555555");
-        long flag=contactService.add(contact);
+//        Contact contact=new Contact("chen","15555555555");
+/*        Resources resources=appContext.getResources();
+        String[] names=resources.getStringArray(R.array.ContactNames);
+        String[] phones=resources.getStringArray(R.array.ContactPhones);
+        for(int i=0;i<names.length;i++)
+        {
+            contactService.add(new Contact(names[i],phones[i]));
+        }
+        contactService.updateContentByCid(new Contact(1,"wang","1999999999"));*/
+        contactService.deleteContactByCid(4);
+       /* long flag=contactService.add(contact);
         if(flag>0)
         {
             System.out.println("#成功");
@@ -39,7 +50,7 @@ public class ExampleInstrumentedTest {
         else
         {
             System.out.println("#失败");
-        }
+        }*/
         List<Contact> list=contactService.getALLContact();
         for(Contact c:list)
         {

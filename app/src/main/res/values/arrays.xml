@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ContactNames">
+        <item>zhang</item>
+        <item>wang</item>
+        <item>li</item>
+        <item>zhao</item>
+        <item>sun</item>
+    </string-array>
+    <string-array name="ContactPhones">
+        <item>12222222222</item>
+        <item>13333333333</item>
+        <item>18888888888</item>
+        <item>15555555555</item>
+        <item>16666666666</item>
+    </string-array>
+</resources>
