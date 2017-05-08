@@ -73,7 +73,7 @@ public class ContactServiceImpl implements ContactService{
     @Override
     public long deleteContactByCid(int cid) {
         SQLiteDatabase db=databaseHelper.getReadableDatabase();
-        db.execSQL("delete from"+DatabaseHelper.TB_NAME+" where cid = "+cid);
+        db.execSQL("delete from "+DatabaseHelper.TB_NAME+" where cid = "+cid);
         return 0;
     }
 
