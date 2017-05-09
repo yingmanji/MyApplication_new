@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity__service"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a0_0.myapplication_new.Activity_DataShow">
+    <TextView
+        android:id="@+id/tv_cid"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/tv_cname"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/tv_cphone"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</LinearLayout>

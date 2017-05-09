@@ -9,7 +9,9 @@ import com.example.a0_0.myapplication_new.model.Contact;
 import com.example.a0_0.myapplication_new.sqlite.DatabaseHelper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by 樱满集0_0 on 2017/5/5.
@@ -86,5 +88,37 @@ public class ContactServiceImpl implements ContactService{
         values.put(DatabaseHelper.FIELD_CPHONE,contact.getCphone());
         long flag=db.update(DatabaseHelper.TB_NAME,values,DatabaseHelper.FIELD_CID+" = ? ",new String[]{String.valueOf(contact.getCid())});
         return flag;
+    }
+    public List<Map<String,String>> getContactMap()
+    {
+        List<Map<String,String>> list=new ArrayList<>();
+        SQLiteDatabase db=databaseHelper.getReadableDatabase();
+        Cursor cursor=null;
+        try
+        {
+            cursor=db.rawQuery("select * from "+DatabaseHelper.TB_NAME,null);
+            if(cursor!=null&&cursor.moveToFirst())
+            {
+                do {
+                    Map<String, String> map = new HashMap<>();
+                    map.put(DatabaseHelper.FIELD_CID, String.valueOf(cursor.getInt(cursor.getColumnIndex("cid"))));
+                    map.put(DatabaseHelper.FIELD_CNAME, String.valueOf(cursor.getInt(cursor.getColumnIndex("cname"))));
+                    map.put(DatabaseHelper.FIELD_CPHONE, String.valueOf(cursor.getInt(cursor.getColumnIndex("cphone"))));
+                    list.add(map);
+                }
+                while(cursor.moveToNext());
+            }
+        }
+        catch (Exception e)
+        {
+
+        }
+        finally {
+            if(cursor!=null)
+            {
+                cursor.close();
+            }
+        }
+        return list;
     }
 }
