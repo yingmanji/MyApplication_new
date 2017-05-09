@@ -89,7 +89,7 @@ public class ContactServiceImpl implements ContactService{
         long flag=db.update(DatabaseHelper.TB_NAME,values,DatabaseHelper.FIELD_CID+" = ? ",new String[]{String.valueOf(contact.getCid())});
         return flag;
     }
-    public List<Map<String,String>> getContactMap()
+    public List<Map<String,String>> getAllContactMap()
     {
         List<Map<String,String>> list=new ArrayList<>();
         SQLiteDatabase db=databaseHelper.getReadableDatabase();
@@ -102,8 +102,8 @@ public class ContactServiceImpl implements ContactService{
                 do {
                     Map<String, String> map = new HashMap<>();
                     map.put(DatabaseHelper.FIELD_CID, String.valueOf(cursor.getInt(cursor.getColumnIndex("cid"))));
-                    map.put(DatabaseHelper.FIELD_CNAME, String.valueOf(cursor.getInt(cursor.getColumnIndex("cname"))));
-                    map.put(DatabaseHelper.FIELD_CPHONE, String.valueOf(cursor.getInt(cursor.getColumnIndex("cphone"))));
+                    map.put(DatabaseHelper.FIELD_CNAME, String.valueOf(cursor.getString(cursor.getColumnIndex("cname"))));
+                    map.put(DatabaseHelper.FIELD_CPHONE, String.valueOf(cursor.getString(cursor.getColumnIndex("cphone"))));
                     list.add(map);
                 }
                 while(cursor.moveToNext());
