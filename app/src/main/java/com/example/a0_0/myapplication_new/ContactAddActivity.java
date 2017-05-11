@@ -1,6 +1,7 @@
 package com.example.a0_0.myapplication_new;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ public class ContactAddActivity extends Activity {
     public void save(View view)
     {
         String cname=et_cname.getText().toString().trim();
-        String cphone=et_cname.getText().toString().trim();
+        String cphone=et_cphone.getText().toString().trim();
         if(cname.equals("")||cname==null)
         {
             Toast.makeText(this,"姓名不能为空！",Toast.LENGTH_SHORT).show();
@@ -38,7 +39,12 @@ public class ContactAddActivity extends Activity {
         if(flag>0)
         {
             Toast.makeText(this,"添加成功！",Toast.LENGTH_SHORT).show();
-            setResult(0x112);
+            Contact c=new Contact((int)flag,cname,cphone);
+            Intent intent=new Intent();
+            Bundle bundle=new Bundle();
+            bundle.putSerializable("newContact",c);
+            intent.putExtras(bundle);
+            setResult(0x112,intent);
             finish();
         }
         else

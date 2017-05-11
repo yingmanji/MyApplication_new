@@ -55,7 +55,7 @@
         <Button
             android:text="取消"
             android:gravity="center"
-            android:onClick="cacel"
+            android:onClick="cancel"
             android:layout_width="120dp"
             android:layout_height="50dp" />
     </LinearLayout>

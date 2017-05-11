@@ -1,10 +1,12 @@
 package com.example.a0_0.myapplication_new.model;
 
+import java.io.Serializable;
+
 /**
  * Created by 樱满集0_0 on 2017/5/2.
  */
 
-public class Contact {
+public class Contact implements Serializable {
     private int cid;
     private String cname;
     private String cphone;
