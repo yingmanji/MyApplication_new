@@ -46,7 +46,7 @@ public class ContactActivity extends Activity {
     }
     public void addContact(View view)
     {
-        startActivityForResult(new Intent(ContactActivity.this,ContactAddActivity.class),0x110);
+        startActivityForResult(new Intent(ContactActivity.this,ContactAddActivity.class),0x110);//跳转到ContactAddActivity
     }
     protected void onActivityResult(int resquestCode,int resultCode,Intent intent)
     {
@@ -59,7 +59,7 @@ public class ContactActivity extends Activity {
             map.put(DatabaseHelper.FIELD_CNAME,String.valueOf(c.getCname()));
             map.put(DatabaseHelper.FIELD_CPHONE,String.valueOf(c.getCphone()));
             data.add(map);
-            adapter.notifyDataSetChanged();
+            adapter.notifyDataSetChanged();//当数据变化时更新Adapter
         }
         if(resquestCode==0x110&&resultCode==0x111)
         {

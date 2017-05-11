@@ -35,14 +35,14 @@ public class ContactAddActivity extends Activity {
             return;
         }
         ContactService service=new ContactServiceImpl(this);
-        long flag=service.add(new Contact(cname,cphone));
+        long flag=service.add(new Contact(cname,cphone));//将新的数据存入数据库
         if(flag>0)
         {
             Toast.makeText(this,"添加成功！",Toast.LENGTH_SHORT).show();
             Contact c=new Contact((int)flag,cname,cphone);
             Intent intent=new Intent();
             Bundle bundle=new Bundle();
-            bundle.putSerializable("newContact",c);
+            bundle.putSerializable("newContact",c);//Contact要实现Serializable接口,否则会报错
             intent.putExtras(bundle);
             setResult(0x112,intent);
             finish();
