@@ -283,11 +283,26 @@
         <activity
             android:name=".ContactEditActivity"
             android:label="@string/title_activity_contact_edit">
-     <!--       <intent-filter>
+
+            <!--
+                <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
+        </activity>
+
+        <service
+            android:name=".service.MyService"
+            android:exported="false" />
+
+        <activity android:name=".Activity_StartService">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
