@@ -18,6 +18,6 @@ public class Activity_StartService extends Activity {
     {
         Intent intent=new Intent(this, MyService.class);
         intent.putExtra("myKey","Service");
-        startService(intent);
+        startService(intent);//调用重载方法startService,不是调用此处的方法
     }
 }
