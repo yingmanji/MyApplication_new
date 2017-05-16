@@ -19,6 +19,7 @@ public class MyResultService extends IntentService {
     }
     @Override
     protected void onHandleIntent(Intent intent) {
+        System.out.println("运行了");
         if (intent != null) {
             String strValue = intent.getStringExtra("myRskey");
             ResultReceiver receiver = (ResultReceiver) intent.getExtras().get("myReceiver");
