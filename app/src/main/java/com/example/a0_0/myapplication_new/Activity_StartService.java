@@ -60,7 +60,7 @@ public class Activity_StartService extends Activity {
                 }
             }
         }
-    }
+    };
     @Override
     protected void onResume() {
         super.onResume();

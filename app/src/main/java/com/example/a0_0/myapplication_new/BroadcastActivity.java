@@ -43,5 +43,5 @@ public class BroadcastActivity extends Activity {
                 }
             }
         }
-    }
+    };
 }
