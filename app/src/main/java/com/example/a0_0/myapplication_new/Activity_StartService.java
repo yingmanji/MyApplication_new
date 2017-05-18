@@ -56,7 +56,7 @@ public class Activity_StartService extends Activity {
                 if(resultCode==0x110)
                 {
                     String broadcastValue=intent.getStringExtra("myBroadcast");
-                    Toast.makeText(context,broadcastValue,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,"#"+broadcastValue,Toast.LENGTH_SHORT).show();
                 }
             }
         }

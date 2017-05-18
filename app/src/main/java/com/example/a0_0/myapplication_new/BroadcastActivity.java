@@ -6,16 +6,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.a0_0.myapplication_new.service.BroadcastService;
 
 public class BroadcastActivity extends Activity {
-
+    private TextView tv_bc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_broadcast);
+        tv_bc=(TextView)findViewById(R.id.tv_bc);
     }
 
     @Override
@@ -39,6 +41,7 @@ public class BroadcastActivity extends Activity {
                 if(resultCode==0x110)
                 {
                     String broadcastValue=intent.getStringExtra("myBroadcast");
+                    tv_bc.setText(broadcastValue);
                     Toast.makeText(context,broadcastValue,Toast.LENGTH_SHORT).show();
                 }
             }
