@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.a0_0.myapplication_new.service.NotificationServcie;
+import com.example.a0_0.myapplication_new.service.NotificationService;
 
 public class NotificationActivity extends Activity {
 
@@ -16,6 +16,6 @@ public class NotificationActivity extends Activity {
     }
     public void startService(View view)
     {
-        startService(new Intent(this, NotificationServcie.class));
+        startService(new Intent(this, NotificationService.class));
     }
 }
