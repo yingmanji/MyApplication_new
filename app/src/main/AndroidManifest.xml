@@ -316,7 +316,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".service.BroadcastService" android:exported="false"/>
+
+        <service
+            android:name=".service.BroadcastService"
+            android:exported="false" />
+
+        <activity android:name=".NotificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
