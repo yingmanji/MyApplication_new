@@ -328,7 +328,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".service.NotificationService" android:exported="false"/>
+
+        <service
+            android:name=".service.NotificationService"
+            android:exported="false" />
+
+        <activity android:name=".Activity_alert">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
