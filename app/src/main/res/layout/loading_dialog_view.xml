@@ -8,8 +8,12 @@
         android:orientation="vertical"
         android:layout_width="100dp"
         android:layout_height="100dp">
-        <ImageView
+        <!--<ImageView
             android:src="@drawable/loading_animation"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />-->
+        <ProgressBar
+            android:indeterminateDrawable="@drawable/loading_animation"
             android:layout_width="60dp"
             android:layout_height="60dp" />
         <TextView
