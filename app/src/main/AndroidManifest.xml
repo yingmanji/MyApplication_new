@@ -61,24 +61,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity_list2">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity android:name=".activity_simple_adapter">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity android:name=".Activity_spinner">
 
@@ -131,14 +125,11 @@
             -->
         </activity>
         <activity android:name=".ActivityB">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity android:name=".ActivityForResult">
 
@@ -153,14 +144,11 @@
         <activity android:name=".ActivityResult1" />
         <activity android:name=".ActivityResult2" />
         <activity android:name=".Activity_FLAG_A">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity android:name=".Activity_FLAG_B" />
         <activity android:name=".Activity_FLAG_C" />
@@ -176,14 +164,11 @@
             -->
         </activity>
         <activity android:name=".Activity_Fragment">
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity android:name=".Activity_FragmentManager">
 
@@ -348,6 +333,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Draw">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_anim">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_checkbox">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
